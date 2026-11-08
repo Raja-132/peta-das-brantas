@@ -40,10 +40,9 @@ a{color:inherit}
 .btn{font:700 15px var(--head);text-decoration:none;padding:13px 22px;border-radius:8px;border:1px solid var(--line)}
 .btn.main{background:var(--flood);border-color:var(--flood);color:#fff}
 .btn:hover{filter:brightness(1.12)}
-.hero-map{display:flex;justify-content:center}
-.hero-map img{width:100%;max-width:520px;height:auto;filter:drop-shadow(0 0 46px rgba(224,38,43,.28));animation:rise 1.4s ease-out both; border-radius:12px;}
+.hero-map{display:flex;justify-content:center; width:100%; border-radius:12px; overflow:hidden; box-shadow:0 0 46px rgba(224,38,43,.28); animation:rise 1.4s ease-out both;}
 @keyframes rise{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
-@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;min-height:0}.hero-map img{max-width:380px}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;min-height:0}.hero-map{max-width:380px; margin: 0 auto;}}
 .strip{background:var(--deep);border-block:1px solid var(--line)}
 .strip .wrap{max-width:1200px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
 .stat{padding:26px 20px;border-left:1px solid var(--line)}
@@ -100,7 +99,14 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <p class="note" style="margin:-14px 0 28px"><b style="color:var(--ink)">Tim Lemah Teles</b> · Prodi Geografi, Universitas Negeri Malang<br>Dosen pembimbing: Dr. Satti Wagistina, S.P., M.Si</p>
 <div class="cta"><a class="btn main" href="#peta">Lihat peta</a><a class="btn" href="#temuan">Baca temuan</a></div>
 </div>
-<div class="hero-map"><img src="gambar/gambar/PERMUKIMAN.jpeg" alt="Peta Kerawanan Banjir"></div>
+
+<!-- INI ADALAH BAGIAN PETA INTERAKTIF (OPSI A) -->
+<div class="hero-map">
+  <!-- GANTI TULISAN "LINK_DARI_CARTO" DI BAWAH INI DENGAN LINK EMBED DARI CARTO KAMU -->
+  <iframe src="LINK_DARI_CARTO" width="100%" height="520" frameborder="0"></iframe>
+</div>
+<!-- BATAS PETA INTERAKTIF -->
+
 </div></header>
 
 <div class="strip"><div class="wrap">
@@ -211,7 +217,6 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <h2>Tim Lemah Teles</h2>
 <p class="lead">Program Studi Geografi, Universitas Negeri Malang</p>
 <div class="team">
-<!-- CATATAN: Pastikan mengunggah file foto Roy dengan nama 'roy.jpeg' ke GitHub agar fotonya muncul -->
 <div class="member"><img class="ph" src="gambar/gambar/roy.jpeg" alt="Roy Juan Akbar" loading="lazy"><h3>Roy Juan Akbar</h3><p>Prodi Geografi, Universitas Negeri Malang</p></div>
 <div class="member"><img class="ph" src="gambar/gambar/satrio.jpeg" alt="Satrio Yohan Raditiya" loading="lazy"><h3>Satrio Yohan Raditiya</h3><p>Prodi Geografi, Universitas Negeri Malang</p></div>
 </div>
