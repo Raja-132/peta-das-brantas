@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tim Lemah Teles | Kerawanan banjir dan keterpaparan permukiman, sebagian DAS Brantas</title>
+<meta name="description" content="Peta kerawanan banjir dan keterpaparan permukiman di sebagian DAS Brantas, Trenggalek dan sekitarnya. Tim Lemah Teles, Universitas Negeri Malang.">
+<meta property="og:title" content="Separuh permukiman berada di zona rawan banjir">
+<meta property="og:image" content="gambar/peta_hero.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{--abyss:#061523;--deep:#0a2034;--panel:#0f2d46;--line:#1e4663;--ink:#e8f1f6;--muted:#9fb6c5;--water:#5ec8d8;--flood:#e0262b;--amber:#ffd479;--head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"Newsreader",Georgia,serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--abyss);color:var(--ink);font:19px/1.7 var(--body)}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(6,21,35,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1200px}
+.brand{font:800 17px var(--head);text-decoration:none}
+.brand i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--flood);margin-right:9px;box-shadow:0 0 12px var(--flood)}
+.menu{display:flex;gap:2px;list-style:none;margin:0;padding:0}
+.menu a{font:500 14.5px var(--head);text-decoration:none;color:var(--muted);padding:8px 12px;border-radius:6px;display:block}
+.menu a:hover{color:var(--ink);background:var(--panel)}
+.menu a.on{color:var(--abyss);background:var(--water)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;width:44px;height:44px;padding:0;cursor:pointer;place-items:center}
+.burger svg{width:22px;height:22px;fill:currentColor}
+.burger[aria-expanded="true"]{background:var(--water);color:var(--abyss);border-color:var(--water)}
+@media(max-width:960px){.burger{display:grid}.menu{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--abyss);padding:10px 16px 16px;border-bottom:1px solid var(--line)}.menu.open{display:flex}.menu a{font-size:16px;padding:12px}}
+.hero{overflow:hidden;background:radial-gradient(900px 600px at 78% 45%,#103a5c 0%,var(--abyss) 70%)}
+.hero .wrap{max-width:1200px;display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:center;min-height:calc(100vh - 64px);padding:40px 24px}
+.kicker{font:15px var(--head);color:var(--water);margin:0 0 14px}
+.hero h1{font:800 clamp(40px,6.4vw,84px)/1.02 var(--head);margin:0 0 22px;letter-spacing:-1.5px}
+.hero .sub{font-size:clamp(18px,2vw,22px);color:var(--muted);max-width:520px;margin:0 0 28px}
+.byline{display:flex;flex-wrap:wrap;gap:10px 18px;font:500 16px var(--head);margin-bottom:30px}
+.byline span{padding-left:14px;border-left:3px solid var(--flood)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font:700 15px var(--head);text-decoration:none;padding:13px 22px;border-radius:8px;border:1px solid var(--line)}
+.btn.main{background:var(--flood);border-color:var(--flood);color:#fff}
+.btn:hover{filter:brightness(1.12)}
+.hero-map{display:flex;justify-content:center}
+.hero-map img{width:100%;max-width:520px;height:auto;filter:drop-shadow(0 0 46px rgba(224,38,43,.28));animation:rise 1.4s ease-out both}
+@keyframes rise{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;min-height:0}.hero-map img{max-width:380px}}
+.strip{background:var(--deep);border-block:1px solid var(--line)}
+.strip .wrap{max-width:1200px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.stat{padding:26px 20px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font:800 34px/1.1 var(--head)}
+.stat b.r{color:#ff6b6e}
+.stat span{display:block;font-size:15px;line-height:1.45;color:var(--muted);margin-top:6px}
+section{padding:76px 0 8px}
+h2{font:800 clamp(30px,4.4vw,48px)/1.08 var(--head);letter-spacing:-.8px;margin:0 0 22px}
+h3{font:700 23px/1.25 var(--head);margin:44px 0 10px}
+p{margin:0 0 14px;max-width:70ch}
+.lead{font-size:22px;line-height:1.55}
+ul,ol{max-width:70ch;padding-left:22px}
+li{margin-bottom:6px}
+.mapfig{margin:18px 0;background:#eef1f5;border-radius:10px;padding:10px;max-width:780px}
+.mapfig img,.fig img{width:100%;height:auto;display:block}
+figure{margin:18px 0}
+figcaption{font-size:15px;color:var(--muted);margin-top:8px;max-width:70ch}
+.fig{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:14px;max-width:700px}
+.fig img{border-radius:6px}
+.fig.g4{background:#2b2b2b}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;max-width:860px}
+.gal figure{margin:0}
+.box{border-left:4px solid var(--water);background:var(--deep);padding:18px 22px;border-radius:0 10px 10px 0;max-width:780px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:16px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:var(--panel);font:700 16px var(--head)}
+.panel{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:22px 26px;max-width:860px}
+.note{font-size:15px;color:var(--muted)}
+.todo{background:rgba(255,212,121,.16);color:var(--amber);padding:0 4px;border-radius:3px}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;max-width:860px}
+.member{background:linear-gradient(160deg,var(--panel),var(--deep));border:1px solid var(--line);border-radius:14px;padding:30px 26px}
+.ph{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--water);display:block;margin-bottom:18px;background:var(--abyss)}
+.member h3{margin:0 0 4px;font-size:26px}
+.member p{margin:0;color:var(--muted);font-size:16px}
+footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-map img{animation:none}}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Menu utama"><div class="wrap">
+<a class="brand" href="#beranda"><i></i>Banjir DAS Brantas</a>
+<button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Buka semua menu"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg></button>
+<ul class="menu" id="menu">
+<li><a href="#latar">Latar</a></li><li><a href="#peta">Peta</a></li><li><a href="#temuan">Temuan</a></li><li><a href="#validasi">Validasi</a></li><li><a href="#ketahanan">Ketahanan</a></li><li><a href="#lapangan">Lapangan</a></li><li><a href="#metode">Metode</a></li><li><a href="#tim">Tim</a></li>
+</ul></div></nav>
+
+<header class="hero" id="beranda"><div class="wrap">
+<div>
+<p class="kicker">CARTO PTRP Expo 2026 · Subtema 3: Risiko bencana, perubahan iklim, dan ketahanan wilayah</p>
+<h1>Separuh permukiman berada di zona rawan banjir</h1>
+<p class="sub">Kerawanan banjir dan keterpaparan permukiman di sebagian DAS Brantas, Trenggalek dan sekitarnya</p>
+<div class="byline"><span>Roy Juan Akbar</span><span>Satrio Yohan Raditiya</span></div>
+<p class="note" style="margin:-14px 0 28px"><b style="color:var(--ink)">Tim Lemah Teles</b> · Prodi Geografi, Universitas Negeri Malang<br>Dosen pembimbing: Dr. Satti Wagistina, S.P., M.Si</p>
+<div class="cta"><a class="btn main" href="#peta">Lihat peta</a><a class="btn" href="#temuan">Baca temuan</a></div>
+</div>
+<div class="hero-map"><img src="gambar/peta_hero.png" alt="Peta kerawanan banjir: zona merah terpusat di dataran tengah"></div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+<div class="stat"><b>40.509 ha</b><span>luas wilayah kajian</span></div>
+<div class="stat"><b class="r">18,9%</b><span>wilayah di kelas tinggi dan sangat tinggi (7.668 ha)</span></div>
+<div class="stat"><b class="r">2.791 ha</b><span>dari 5.478 ha permukiman di kelas tinggi-sangat tinggi (perkiraan)</span></div>
+<div class="stat"><b class="r">233 / 478</b><span>fasilitas publik di kelas tinggi-sangat tinggi</span></div>
+<div class="stat"><b>± 322 km</b><span>jalan di zona tinggi-sangat tinggi (± 30%)</span></div>
+</div></div>
+
+<main class="wrap">
+
+<section id="intisari">
+<h2>Intisari</h2>
+<p class="lead">Dari wilayah kajian seluas 40.509 ha, sekitar 19% masuk kelas kerawanan banjir tinggi dan sangat tinggi. Luasnya tidak besar, tetapi berimpit dengan tempat orang tinggal: sekitar separuh kawasan permukiman (perkiraan berdasarkan kelas mayoritas piksel pada tiap poligon) dan 233 dari 478 fasilitas publik berada di zona itu.</p>
+<p>Zona rawan membentuk satu pita lebar di dataran tengah, dan sebagian besar permukiman di Pogalan, Trenggalek, Karangan, dan Tugu berada di dalamnya. Peta ini alat untuk menentukan di mana verifikasi lapangan dan perencanaan perlu dimulai lebih dulu, bukan prediksi banjir pada hari tertentu.</p>
+</section>
+
+<section id="latar">
+<h2>Latar belakang dan tujuan</h2>
+<p>Bencana hidrometeorologi mendominasi kejadian bencana di Indonesia, dan banjir termasuk jenis yang paling sering terjadi. Hingga 17 Desember 2025, banjir tercatat 1.584 kejadian dari 3.116 bencana (BNPB, 2025). Hingga 29 Oktober 2026, BNPB mencatat 2.236 bencana, 99,19% di antaranya hidrometeorologi, dengan banjir di urutan kedua (590 kejadian) setelah kebakaran hutan dan lahan (BNPB, 2026). Indeks Risiko Bencana Indonesia 2024 menempatkan 321 kabupaten/kota, atau 62%, pada tingkat risiko banjir tinggi (BNPB, 2024). Kondisi ini menuntut informasi spasial yang menunjukkan di mana bahaya berada serta permukiman dan fasilitas apa yang terpapar.</p>
+<p>Wilayah kajian mencakup sebagian Kabupaten Trenggalek dan Kabupaten Ponorogo pada sistem DAS Brantas. Di Kabupaten Trenggalek, sistem Sub-DAS Ngrowo-Ngasinan berulang kali dilanda banjir: banjir bandang pertama yang tercatat terjadi pada 31 Agustus 1992 dan melanda lima kecamatan (Fauziah, 2008). Sungai Bagong, bagian dari sub-DAS tersebut, menyumbang debit banjir besar sehingga sistem pengendalian banjir belum dapat mengatasi banjir di Kota Trenggalek secara tuntas (Mustika, 2019).</p>
+<p>Kejadian 18 Oktober 2022 memperlihatkan dampaknya pada ruang terbangun. BPBD mencatat 25 desa di lima kecamatan (Trenggalek, Karangan, Pogalan, Durenan, Gandusari) dan 7.440 jiwa terdampak (BPBD Kab. Trenggalek, 2022). Banjir juga menggenangi rumah sakit daerah sehingga 47 pasien rawat inap dievakuasi <span class="todo">[sumber]</span>, dan Bupati menilainya lebih besar daripada banjir bandang 2006 <span class="todo">[sumber]</span>. Permukiman dan fasilitas vital dengan demikian berada pada jalur bahaya yang berulang.</p>
+<p>Upaya struktural terus berjalan, antara lain Bendungan Bagong yang dirancang menampung 17,4 juta m³ <span class="todo">[sumber]</span> dan percepatan dinding pengendali banjir Sungai Tawing di Pogalan oleh BBWS Brantas pada November 2026 (Antara, 2026). Upaya itu perlu dilengkapi informasi spasial yang menghubungkan kerawanan dengan sebaran permukiman, fasilitas publik, dan jalan sebagai dasar penataan ruang. Pembelajaran mesin kini banyak dipakai untuk pemetaan kerawanan banjir, dan Liao dkk. (2024) menekankan pentingnya ketangguhan (robustness) dan interpretasi model.</p>
+<p>Penelitian ini memetakan kerawanan banjir pada resolusi 30 m dengan Random Forest dan optimasi hyperparameter, lalu menumpangsusunkan hasilnya dengan permukiman, fasilitas publik, dan jalan skala 1:25.000 untuk menilai keterpaparan. Hasilnya diharapkan menjadi dasar perencanaan tata ruang dan penguatan ketahanan wilayah.</p>
+<h3>Rumusan masalah</h3>
+<ol>
+<li>Bagaimana sebaran dan luas tingkat kerawanan banjir di wilayah kajian?</li>
+<li>Berapa luas permukiman, jumlah fasilitas publik, dan panjang jalan di zona kerawanan tinggi-sangat tinggi, dan di kecamatan mana keterpaparan itu terkonsentrasi?</li>
+<li>Bagaimana kinerja Random Forest dengan optimasi hyperparameter, dan apa keterbatasannya?</li>
+</ol>
+<h3>Tujuan</h3>
+<ol>
+<li>Memetakan kerawanan banjir pada resolusi 30 m dalam lima kelas.</li>
+<li>Menganalisis keterpaparan permukiman, fasilitas publik, dan jalan serta mengidentifikasi kecamatan prioritas.</li>
+<li>Mengevaluasi kinerja model dan menyatakan keterbatasannya.</li>
+</ol>
+</section>
+
+<section id="peta">
+<h2>Peta kerawanan banjir</h2>
+<div class="mapfig"><img src="gambar/peta_kerawanan.png" alt="Peta kerawanan banjir lima kelas" loading="lazy"></div>
+<figcaption>Resolusi 30 m, proyeksi UTM 49S (EPSG:32749). Peta dasar: Esri, TomTom, Garmin, METI/NASA, USGS.</figcaption>
+<h3>Cara membaca peta</h3>
+<ul>
+<li>Hijau berarti kerawanan sangat rendah sampai rendah, kuning sedang, oranye sampai merah tinggi sampai sangat tinggi.</li>
+<li>Kelas dibuat dari probabilitas hasil model, lalu dibagi lima. Kelas bersifat relatif di wilayah ini, bukan peluang banjir pasti pada suatu tahun.</li>
+<li>Merah mengikuti dataran dan lembah sungai di bagian tengah, sedangkan perbukitan di barat, utara, dan selatan didominasi hijau.</li>
+</ul>
+</section>
+
+<section id="temuan">
+<h2>Temuan utama</h2>
+<h3>1. Zona rawan sempit, tetapi menumpuk di satu bentang</h3>
+<p>Sekitar 67% wilayah (kelas sangat rendah dan rendah) berkerawanan rendah. Kelas tinggi dan sangat tinggi hanya 19% (±10% tinggi, ±9% sangat tinggi), dan hampir semuanya berada di dataran tengah.</p>
+<figure class="fig"><img src="gambar/g1_distribusi_kelas.png" alt="Distribusi luas kelas kerawanan" loading="lazy"><figcaption>Distribusi luas lima kelas kerawanan.</figcaption></figure>
+<h3>2. Permukiman berada tepat di zona itu</h3>
+<p>Sekitar separuh kawasan permukiman (2.791 dari 5.478 ha) berada di kelas tinggi sampai sangat tinggi (perkiraan), padahal zona itu hanya 19% wilayah. Hampir seluruhnya ada di empat kecamatan: Trenggalek (800 ha), Pogalan (752 ha), Karangan (734 ha), dan Tugu (503 ha). Sebagian besar permukiman di Pogalan (±100%), Trenggalek (87%), Karangan (82%), dan Tugu (53%) berada di zona tersebut. Persentase pada grafik adalah bagian permukiman kecamatan yang terpapar.</p>
+<figure class="fig"><img src="gambar/g2_permukiman_kecamatan.png" alt="Permukiman di zona tinggi-sangat tinggi per kecamatan" loading="lazy"><figcaption>Permukiman di zona tinggi-sangat tinggi menurut kecamatan.</figcaption></figure>
+<h3>3. Fasilitas publik ikut terpapar</h3>
+<p>Dari 478 fasilitas, 233 (49%) berada di zona tinggi sampai sangat tinggi: 15 dari 26 fasilitas kesehatan (58%), 45 dari 75 fasilitas pemerintahan (60%), 98 dari 185 fasilitas pendidikan (53%), dan 75 dari 192 tempat ibadah (39%). Layanan yang dibutuhkan saat tanggap darurat bisa ikut terganggu justru ketika banjir terjadi. Jalan yang terpapar sekitar 322 km dari 1.059 km (±30%).</p>
+<figure class="fig"><img src="gambar/g3_fasilitas.png" alt="Fasilitas publik di zona kelas 4-5" loading="lazy"><figcaption>Persentase fasilitas publik di zona kelas 4-5 menurut jenis.</figcaption></figure>
+<h3>4. Banjir memang pernah tercatat di wilayah ini</h3>
+<p>Inventori memuat 60 catatan pada 32 titik selama 2006-2022. Tahun 2022 paling banyak (19 catatan), disusul 2007 (9). Catatan ini indikatif karena dipengaruhi kelengkapan pelaporan, dan penyebab lonjakan 2022 tidak dianalisis di sini.</p>
+<figure class="fig g4"><img src="gambar/g4_banjir_tahun_gelap.png" alt="Catatan kejadian banjir per tahun" loading="lazy"><figcaption>Catatan kejadian banjir per tahun (indikatif).</figcaption></figure>
+</section>
+
+<section id="validasi">
+<h2>Seberapa dapat dipercaya peta ini?</h2>
+<p>Model diuji pada titik latihnya sendiri. Pada semua titik, AUC mencapai 0,96. Namun titik non-banjir banyak berada di dataran tinggi yang mudah dibedakan dari lokasi banjir, sehingga nilai itu cenderung optimistis. Ujian yang lebih adil membandingkan titik banjir dengan non-banjir di dataran rendah saja: AUC turun menjadi 0,73, artinya model lebih baik daripada menebak tetapi terbatas di dataran rendah. Pada kurva tingkat keberhasilan, 10% area dengan probabilitas tertinggi mencakup 67% titik banjir (AUC 0,93; n = 21). Belum ada validasi dengan data independen.</p>
+<figure class="fig"><img src="gambar/g6_roc_poster.png" alt="Kurva ROC" loading="lazy"><figcaption>Kurva ROC. AUC 0,96 (CI 95% 0,92-0,98; 21 banjir vs 160 non-banjir) dan AUC 0,73 (CI 95% 0,58-0,87; 21 banjir vs 24 non-banjir).</figcaption></figure>
+</section>
+
+<section id="ketahanan">
+<h2>Apa artinya bagi ketahanan wilayah</h2>
+<div class="box">
+<p>Usulan penulis berdasarkan pola peta, bukan hasil perhitungan model.</p>
+<ul>
+<li><b>Verifikasi lapangan dahulu</b> di Trenggalek, Pogalan, Karangan, dan Tugu, tempat paparan permukiman terbesar.</li>
+<li><b>Cek fasilitas penting</b> seperti fasilitas kesehatan dan kantor pemerintahan di zona tinggi: akses, jalur evakuasi, dan lokasi cadangan layanan.</li>
+<li><b>Pertimbangkan zona ini dalam tata ruang</b> sebelum menambah permukiman atau fasilitas baru.</li>
+<li><b>Perbarui peta</b> setelah ada data kejadian dan validasi independen yang lebih banyak.</li>
+</ul>
+</div>
+</section>
+
+<section id="lapangan">
+<h2>Parameter dan foto lapangan</h2>
+<p><span class="todo">[Tujuan survei, tanggal, jumlah titik, alat, dan bagaimana hasilnya dipakai (inventori, validasi, atau konfirmasi).]</span></p>
+<div class="tbl"><table>
+<thead><tr><th>Lokasi / titik</th><th>Koordinat</th><th>Parameter</th><th>Nilai</th><th>Keterangan</th></tr></thead>
+<tbody><tr><td class="todo">[isi]</td><td class="todo">[isi]</td><td class="todo">[isi]</td><td class="todo">[isi]</td><td class="todo">[isi]</td></tr></tbody>
+</table></div>
+<div class="gal" style="margin-top:18px">
+<figure class="fig"><img src="gambar/survei1.webp" alt="Foto survei 1" loading="lazy" onerror="this.closest('figure').remove()"><figcaption><span class="todo">[lokasi, tanggal, apa yang terlihat]</span></figcaption></figure>
+<figure class="fig"><img src="gambar/survei2.webp" alt="Foto survei 2" loading="lazy" onerror="this.closest('figure').remove()"><figcaption><span class="todo">[lokasi, tanggal, apa yang terlihat]</span></figcaption></figure>
+<figure class="fig"><img src="gambar/survei3.webp" alt="Foto survei 3" loading="lazy" onerror="this.closest('figure').remove()"><figcaption><span class="todo">[lokasi, tanggal, apa yang terlihat]</span></figcaption></figure>
+</div>
+<p class="note" style="margin-top:10px">Hanya foto milik tim; hapus data lokasi (EXIF) dari foto rumah warga dan jangan tampilkan wajah tanpa izin.</p>
+</section>
+
+<section id="metode">
+<h2>Data dan metode</h2>
+<div class="panel">
+<p><b>Metode:</b> Random Forest dengan optimasi hyperparameter, menghasilkan peta probabilitas 30 m (UTM 49S) yang dibagi lima kelas. <span class="todo">[Tambahkan variabel dan cara optimasinya.]</span></p>
+<p><b>Data latih:</b> 196 titik, 32 di antaranya titik banjir, dan 21 titik banjir jatuh di dalam raster. <span class="todo">[Jelaskan sumber inventori dan pengambilan titik non-banjir.]</span></p>
+<p><b>Keterpaparan:</b> piksel raster kerawanan dihitung di dalam poligon kawasan permukiman RBI dan dijumlahkan; fasilitas dihitung per titik berdasarkan kelas di lokasinya; jalan dihitung dari titik tiap 50 m sepanjang garis, panjang adalah jumlah titik di kelas 4-5 dikali 50 m (perkiraan).</p>
+<p><b>Keterbatasan:</b> titik banjir sedikit; non-banjir didominasi dataran tinggi; resolusi 30 m terlalu kasar untuk permukiman kecil; catatan banjir indikatif; kelas bersifat relatif; belum ada validasi independen. Kajian ini tidak menganalisis tren iklim: rata-rata curah hujan antarkelas hampir tidak berbeda, sehingga pola kerawanan tidak dapat dikaitkan dengan hujan.</p>
+<p><b>Penggunaan AI:</b> AI dipakai sebagai alat bantu (eksplorasi awal, penyusunan format, penulisan kode, dan penyuntingan teks) dengan sepengetahuan panitia. Seluruh data dan hasil diperiksa tim.</p>
+<p><b>Sumber data:</b> Peta RBI 1:25.000 (BIG) untuk permukiman, fasilitas, dan jalan. <span class="todo">[DEM, curah hujan, penggunaan lahan, litologi, inventori banjir, batas kecamatan: sumber, tahun, lisensi.]</span></p>
+<p style="margin-bottom:6px"><b>Daftar pustaka</b></p>
+<ul class="note" style="margin:0">
+<li>Antara. (2026, 5 November). <i>BBWS pacu pembangunan dinding pengendali banjir sungai di Trenggalek</i>. antaranews.com/berita/5834147</li>
+<li>BNPB. (2024, 2025, 2026). <span class="todo">[IRBI 2024 dan data kejadian; utamakan dokumen primer BNPB, tambahkan URL dan tanggal akses]</span></li>
+<li>BPBD Kabupaten Trenggalek. (2022). <i>Informasi banjir 18 Oktober 2022 di Kab. Trenggalek</i>. <span class="todo">[URL, tanggal akses]</span></li>
+<li>Fauziah. (2008). <i>Kejadian banjir di DAS Ngrowo Ngasinan tahun 1992-2008, Kabupaten Trenggalek</i> [Skripsi, Universitas Indonesia]. <span class="todo">[tautan]</span></li>
+<li>Liao, M., Wen, H., Yang, L., Wang, G., Xiang, X., &amp; Liang, X. (2024). Improving the model robustness of flood hazard mapping based on hyperparameter optimization of random forest. <i>Expert Systems with Applications, 241</i>, 122682. https://doi.org/10.1016/j.eswa.2023.122682</li>
+<li><span class="todo">[Sumber Sungai Bagong, Bendungan Bagong, 47 pasien, pernyataan Bupati, dan referensi lain]</span></li>
+</ul>
+</div>
+</section>
+
+<section id="tim">
+<h2>Tim Lemah Teles</h2>
+<p class="lead">Program Studi Geografi, Universitas Negeri Malang</p>
+<div class="team">
+<div class="member"><img class="ph" src="gambar/foto_roy.jpg" alt="Roy Juan Akbar" loading="lazy"><h3>Roy Juan Akbar</h3><p>Prodi Geografi, Universitas Negeri Malang</p></div>
+<div class="member"><img class="ph" src="gambar/foto_satrio.jpg" alt="Satrio Yohan Raditiya" loading="lazy"><h3>Satrio Yohan Raditiya</h3><p>Prodi Geografi, Universitas Negeri Malang</p></div>
+</div>
+<div class="member" style="max-width:860px;margin-top:18px;display:flex;gap:22px;align-items:center;flex-wrap:wrap">
+<img class="ph" style="margin:0" src="gambar/foto_satti.jpg" alt="Dr. Satti Wagistina, S.P., M.Si" loading="lazy">
+<div><p style="color:var(--water);font:500 16px var(--head);margin:0 0 2px">Dosen pembimbing</p><h3 style="margin:0 0 4px">Dr. Satti Wagistina, S.P., M.Si</h3><p>Prodi Geografi, Universitas Negeri Malang</p></div>
+</div>
+</section>
+
+</main>
+
+<footer><div class="wrap">Peta dan analisis disusun oleh Tim Lemah Teles (Roy Juan Akbar dan Satrio Yohan Raditiya), Prodi Geografi, Universitas Negeri Malang. Dosen pembimbing: Dr. Satti Wagistina, S.P., M.Si. Lisensi data mengikuti sumber aslinya.</div></footer>
+
+<script>
+const b=document.getElementById('burger'),m=document.getElementById('menu'),close=()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)};
+b.onclick=()=>{b.setAttribute('aria-expanded',m.classList.toggle('open'))};
+document.addEventListener('click',e=>{if(!m.contains(e.target)&&!b.contains(e.target))close()});
+const L=[...m.querySelectorAll('a')];
+L.forEach(a=>a.addEventListener('click',close));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)L.forEach(l=>l.classList.toggle('on',l.hash==='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
+L.forEach(a=>{const s=document.querySelector(a.hash);s&&io.observe(s)});
+</script>
+</body>
+</html>
