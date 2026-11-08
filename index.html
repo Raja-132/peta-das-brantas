@@ -41,6 +41,7 @@ a{color:inherit}
 .btn.main{background:var(--flood);border-color:var(--flood);color:#fff}
 .btn:hover{filter:brightness(1.12)}
 .hero-map{display:flex;justify-content:center; width:100%; border-radius:12px; overflow:hidden; box-shadow:0 0 46px rgba(224,38,43,.28); animation:rise 1.4s ease-out both;}
+.hero-map img {width: 100%; height: auto; display: block;}
 @keyframes rise{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;min-height:0}.hero-map{max-width:380px; margin: 0 auto;}}
 .strip{background:var(--deep);border-block:1px solid var(--line)}
@@ -64,8 +65,10 @@ figcaption{font-size:15px;color:var(--muted);margin-top:8px;max-width:70ch}
 .fig{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:14px;max-width:700px; margin: 20px 0;}
 .fig img{border-radius:6px}
 .fig.g4{background:#2b2b2b}
-.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;max-width:860px}
-.gal figure{margin:0}
+.gal-params {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 24px 0;}
+.gal-params figure {margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 10px; text-align: center;}
+.gal-params img {width: 100%; height: auto; border-radius: 4px; background: #fff;}
+.gal-params figcaption {font-size: 14px; font-weight: 700; font-family: var(--head); margin-top: 10px; color: var(--ink);}
 .box{border-left:4px solid var(--water);background:var(--deep);padding:18px 22px;border-radius:0 10px 10px 0;max-width:780px}
 .tbl{overflow-x:auto}
 table{border-collapse:collapse;width:100%;font-size:16px}
@@ -87,7 +90,7 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <a class="brand" href="#beranda"><i></i>Banjir DAS Brantas</a>
 <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Buka semua menu"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg></button>
 <ul class="menu" id="menu">
-<li><a href="#latar">Latar</a></li><li><a href="#peta">Peta</a></li><li><a href="#temuan">Temuan</a></li><li><a href="#validasi">Validasi</a></li><li><a href="#ketahanan">Ketahanan</a></li><li><a href="#metode">Metode</a></li><li><a href="#tim">Tim</a></li>
+<li><a href="#latar">Latar</a></li><li><a href="#parameter">Parameter</a></li><li><a href="#temuan">Temuan</a></li><li><a href="#validasi">Validasi</a></li><li><a href="#ketahanan">Ketahanan</a></li><li><a href="#metode">Metode</a></li><li><a href="#tim">Tim</a></li>
 </ul></div></nav>
 
 <header class="hero" id="beranda"><div class="wrap">
@@ -97,15 +100,13 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <p class="sub">Kerawanan banjir dan keterpaparan permukiman di sebagian DAS Brantas, Trenggalek dan sekitarnya</p>
 <div class="byline"><span>Roy Juan Akbar</span><span>Satrio Yohan Raditiya</span></div>
 <p class="note" style="margin:-14px 0 28px"><b style="color:var(--ink)">Tim Lemah Teles</b> · Prodi Geografi, Universitas Negeri Malang<br>Dosen pembimbing: Dr. Satti Wagistina, S.P., M.Si</p>
-<div class="cta"><a class="btn main" href="#peta">Lihat peta</a><a class="btn" href="#temuan">Baca temuan</a></div>
+<div class="cta"><a class="btn main" href="#parameter">Lihat Peta</a><a class="btn" href="#temuan">Baca temuan</a></div>
 </div>
 
-<!-- INI ADALAH BAGIAN PETA INTERAKTIF (OPSI A) -->
 <div class="hero-map">
-  <!-- GANTI TULISAN "LINK_DARI_CARTO" DI BAWAH INI DENGAN LINK EMBED DARI CARTO KAMU -->
-  <iframe src="LINK_DARI_CARTO" width="100%" height="520" frameborder="0"></iframe>
+  <!-- PASTIKAN KAMU SUDAH MENGUNGGAH FILE kerawanan_banjir_5kelas.png KE GITHUB -->
+  <img src="gambar/gambar/kerawanan_banjir_5kelas.png" alt="Peta Kerawanan Banjir 5 Kelas" loading="lazy">
 </div>
-<!-- BATAS PETA INTERAKTIF -->
 
 </div></header>
 
@@ -131,30 +132,30 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <p>Wilayah kajian mencakup sebagian Kabupaten Trenggalek dan Kabupaten Ponorogo pada sistem DAS Brantas. Di Kabupaten Trenggalek, sistem Sub-DAS Ngrowo-Ngasinan berulang kali dilanda banjir: banjir bandang pertama yang tercatat terjadi pada 31 Agustus 1992 dan melanda lima kecamatan (Fauziah, 2008). Sungai Bagong, bagian dari sub-DAS tersebut, menyumbang debit banjir besar sehingga sistem pengendalian banjir belum dapat mengatasi banjir di Kota Trenggalek secara tuntas (Mustika, 2019).</p>
 <p>Kejadian 18 Oktober 2022 memperlihatkan dampaknya pada ruang terbangun. BPBD mencatat 25 desa di lima kecamatan (Trenggalek, Karangan, Pogalan, Durenan, Gandusari) dan 7.440 jiwa terdampak (BPBD Kab. Trenggalek, 2022). Banjir juga menggenangi rumah sakit daerah sehingga 47 pasien rawat inap dievakuasi, dan Bupati menilainya lebih besar daripada banjir bandang 2006. Permukiman dan fasilitas vital dengan demikian berada pada jalur bahaya yang berulang.</p>
 <p>Upaya struktural terus berjalan, antara lain Bendungan Bagong yang dirancang menampung 17,4 juta m³ dan percepatan dinding pengendali banjir Sungai Tawing di Pogalan oleh BBWS Brantas pada November 2026 (Antara, 2026). Upaya itu perlu dilengkapi informasi spasial yang menghubungkan kerawanan dengan sebaran permukiman, fasilitas publik, dan jalan sebagai dasar penataan ruang. Pembelajaran mesin kini banyak dipakai untuk pemetaan kerawanan banjir, dan Liao dkk. (2024) menekankan pentingnya ketangguhan (robustness) dan interpretasi model.</p>
-<p>Penelitian ini memetakan kerawanan banjir pada resolusi 30 m dengan Random Forest dan optimasi hyperparameter, lalu menumpangsusunkan hasilnya dengan permukiman, fasilitas publik, dan jalan skala 1:25.000 untuk menilai keterpaparan. Hasilnya diharapkan menjadi dasar perencanaan tata ruang dan penguatan ketahanan wilayah.</p>
-<h3>Rumusan masalah</h3>
-<ol>
-<li>Bagaimana sebaran dan luas tingkat kerawanan banjir di wilayah kajian?</li>
-<li>Berapa luas permukiman, jumlah fasilitas publik, dan panjang jalan di zona kerawanan tinggi-sangat tinggi, dan di kecamatan mana keterpaparan itu terkonsentrasi?</li>
-<li>Bagaimana kinerja Random Forest dengan optimasi hyperparameter, dan apa keterbatasannya?</li>
-</ol>
-<h3>Tujuan</h3>
-<ol>
-<li>Memetakan kerawanan banjir pada resolusi 30 m dalam lima kelas.</li>
-<li>Menganalisis keterpaparan permukiman, fasilitas publik, dan jalan serta mengidentifikasi kecamatan prioritas.</li>
-<li>Mengevaluasi kinerja model dan menyatakan keterbatasannya.</li>
-</ol>
 </section>
 
-<section id="peta">
-<h2>Peta Elevasi Lahan</h2>
-<div class="mapfig"><img src="gambar/gambar/ELEVATION.jpeg" alt="Peta Elevasi Lahan" loading="lazy"></div>
-<figcaption>Resolusi 30 m, proyeksi UTM 49S (EPSG:32749). Peta dasar: Esri, TomTom, Garmin, METI/NASA, USGS.</figcaption>
-<h3>Cara membaca peta</h3>
-<ul>
-<li>Peta elevasi ini merupakan salah satu parameter yang digunakan dalam memodelkan sebaran kerawanan banjir.</li>
-<li>Dataran rendah di bagian tengah wilayah kajian berkorelasi kuat dengan kelas kerawanan yang tinggi.</li>
-</ul>
+<section id="parameter">
+<h2>Parameter Pemodelan</h2>
+<p>Berikut adalah berbagai visualisasi parameter spasial yang digunakan dalam pemodelan kerawanan banjir ini:</p>
+
+<div class="gal-params">
+  <figure><img src="gambar/gambar/ELEVATION.jpeg" alt="Elevation" loading="lazy"><figcaption>Elevation</figcaption></figure>
+  <figure><img src="gambar/gambar/SLOPE.jpeg" alt="Slope" loading="lazy"><figcaption>Slope</figcaption></figure>
+  <figure><img src="gambar/gambar/ASPECT.jpeg" alt="Aspect" loading="lazy"><figcaption>Aspect</figcaption></figure>
+  <figure><img src="gambar/gambar/PLAN CURVATURE.jpeg" alt="Plan Curvature" loading="lazy"><figcaption>Plan Curvature</figcaption></figure>
+  <figure><img src="gambar/gambar/PROFILE CURVATURE.jpeg" alt="Profile Curvature" loading="lazy"><figcaption>Profile Curvature</figcaption></figure>
+  <figure><img src="gambar/gambar/COMPOSITE CURVATURE.jpeg" alt="Composite Curvature" loading="lazy"><figcaption>Composite Curvature</figcaption></figure>
+  <figure><img src="gambar/gambar/GEOLOGI.jpeg" alt="Geologi" loading="lazy"><figcaption>Geologi</figcaption></figure>
+  <figure><img src="gambar/gambar/TERRAIN RELIEF.jpeg" alt="Terrain Relief" loading="lazy"><figcaption>Terrain Relief</figcaption></figure>
+  <figure><img src="gambar/gambar/TERRAIN RUGGEDNESS INDEX.jpeg" alt="Terrain Ruggedness Index" loading="lazy"><figcaption>Terrain Ruggedness Index</figcaption></figure>
+  <figure><img src="gambar/gambar/TOPOGRAPHIC WETNESS INDEX.jpeg" alt="Topographic Wetness Index" loading="lazy"><figcaption>Topographic Wetness Index</figcaption></figure>
+  <figure><img src="gambar/gambar/SOIL TEMPERATURE INDEX.jpeg" alt="Soil Temperature Index" loading="lazy"><figcaption>Soil Temperature Index</figcaption></figure>
+  <figure><img src="gambar/gambar/FRACTIONAL COVER.jpeg" alt="Fractional Cover" loading="lazy"><figcaption>Fractional Cover</figcaption></figure>
+  <figure><img src="gambar/gambar/LAND USE.jpeg" alt="Land Use" loading="lazy"><figcaption>Land Use</figcaption></figure>
+  <figure><img src="gambar/gambar/DISTANCE FROM ROAD.jpeg" alt="Distance from Road" loading="lazy"><figcaption>Distance From Road</figcaption></figure>
+  <figure><img src="gambar/gambar/Distance from River.jpeg" alt="Distance from River" loading="lazy"><figcaption>Distance From River</figcaption></figure>
+  <figure><img src="gambar/gambar/PERMUKIMAN.jpeg" alt="Permukiman" loading="lazy"><figcaption>Permukiman</figcaption></figure>
+</div>
 </section>
 
 <section id="temuan">
@@ -217,7 +218,12 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <h2>Tim Lemah Teles</h2>
 <p class="lead">Program Studi Geografi, Universitas Negeri Malang</p>
 <div class="team">
-<div class="member"><img class="ph" src="gambar/gambar/roy.jpeg" alt="Roy Juan Akbar" loading="lazy"><h3>Roy Juan Akbar</h3><p>Prodi Geografi, Universitas Negeri Malang</p></div>
+<div class="member">
+  <!-- INI NAMA FILE FOTO ROY YANG BENAR SESUAI GITHUB KAMU (ROii.jpeg) -->
+  <img class="ph" src="gambar/gambar/ROii.jpeg" alt="Roy Juan Akbar" loading="lazy">
+  <h3>Roy Juan Akbar</h3>
+  <p>Prodi Geografi, Universitas Negeri Malang</p>
+</div>
 <div class="member"><img class="ph" src="gambar/gambar/satrio.jpeg" alt="Satrio Yohan Raditiya" loading="lazy"><h3>Satrio Yohan Raditiya</h3><p>Prodi Geografi, Universitas Negeri Malang</p></div>
 </div>
 <div class="member" style="max-width:860px;margin-top:18px;display:flex;gap:22px;align-items:center;flex-wrap:wrap">
