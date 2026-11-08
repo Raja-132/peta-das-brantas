@@ -6,7 +6,7 @@
 <title>Tim Lemah Teles | Kerawanan banjir dan keterpaparan permukiman, sebagian DAS Brantas</title>
 <meta name="description" content="Peta kerawanan banjir dan keterpaparan permukiman di sebagian DAS Brantas, Trenggalek dan sekitarnya. Tim Lemah Teles, Universitas Negeri Malang.">
 <meta property="og:title" content="Separuh permukiman berada di zona rawan banjir">
-<meta property="og:image" content="gambar/peta_hero.png">
+<meta property="og:image" content="gambar/gambar/PERMUKIMAN.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@ a{color:inherit}
 .btn.main{background:var(--flood);border-color:var(--flood);color:#fff}
 .btn:hover{filter:brightness(1.12)}
 .hero-map{display:flex;justify-content:center}
-.hero-map img{width:100%;max-width:520px;height:auto;filter:drop-shadow(0 0 46px rgba(224,38,43,.28));animation:rise 1.4s ease-out both}
+.hero-map img{width:100%;max-width:520px;height:auto;filter:drop-shadow(0 0 46px rgba(224,38,43,.28));animation:rise 1.4s ease-out both; border-radius:12px;}
 @keyframes rise{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;min-height:0}.hero-map img{max-width:380px}}
 .strip{background:var(--deep);border-block:1px solid var(--line)}
@@ -62,7 +62,7 @@ li{margin-bottom:6px}
 .mapfig img,.fig img{width:100%;height:auto;display:block}
 figure{margin:18px 0}
 figcaption{font-size:15px;color:var(--muted);margin-top:8px;max-width:70ch}
-.fig{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:14px;max-width:700px}
+.fig{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:14px;max-width:700px; margin: 20px 0;}
 .fig img{border-radius:6px}
 .fig.g4{background:#2b2b2b}
 .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;max-width:860px}
@@ -88,7 +88,7 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <a class="brand" href="#beranda"><i></i>Banjir DAS Brantas</a>
 <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Buka semua menu"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg></button>
 <ul class="menu" id="menu">
-<li><a href="#latar">Latar</a></li><li><a href="#peta">Peta</a></li><li><a href="#temuan">Temuan</a></li><li><a href="#validasi">Validasi</a></li><li><a href="#ketahanan">Ketahanan</a></li><li><a href="#lapangan">Lapangan</a></li><li><a href="#metode">Metode</a></li><li><a href="#tim">Tim</a></li>
+<li><a href="#latar">Latar</a></li><li><a href="#peta">Peta</a></li><li><a href="#temuan">Temuan</a></li><li><a href="#validasi">Validasi</a></li><li><a href="#ketahanan">Ketahanan</a></li><li><a href="#metode">Metode</a></li><li><a href="#tim">Tim</a></li>
 </ul></div></nav>
 
 <header class="hero" id="beranda"><div class="wrap">
@@ -100,7 +100,7 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <p class="note" style="margin:-14px 0 28px"><b style="color:var(--ink)">Tim Lemah Teles</b> · Prodi Geografi, Universitas Negeri Malang<br>Dosen pembimbing: Dr. Satti Wagistina, S.P., M.Si</p>
 <div class="cta"><a class="btn main" href="#peta">Lihat peta</a><a class="btn" href="#temuan">Baca temuan</a></div>
 </div>
-<div class="hero-map"><img src="gambar/gambar/PERMUKIMAN.jpeg" alt="Peta kerawanan banjir"></div>
+<div class="hero-map"><img src="gambar/gambar/PERMUKIMAN.jpeg" alt="Peta Kerawanan Banjir"></div>
 </div></header>
 
 <div class="strip"><div class="wrap">
@@ -146,9 +146,8 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <figcaption>Resolusi 30 m, proyeksi UTM 49S (EPSG:32749). Peta dasar: Esri, TomTom, Garmin, METI/NASA, USGS.</figcaption>
 <h3>Cara membaca peta</h3>
 <ul>
-<li>Hijau berarti kerawanan sangat rendah sampai rendah, kuning sedang, oranye sampai merah tinggi sampai sangat tinggi.</li>
-<li>Kelas dibuat dari probabilitas hasil model, lalu dibagi lima. Kelas bersifat relatif di wilayah ini, bukan peluang banjir pasti pada suatu tahun.</li>
-<li>Merah mengikuti dataran dan lembah sungai di bagian tengah, sedangkan perbukitan di barat, utara, dan selatan didominasi hijau.</li>
+<li>Peta elevasi ini merupakan salah satu parameter yang digunakan dalam memodelkan sebaran kerawanan banjir.</li>
+<li>Dataran rendah di bagian tengah wilayah kajian berkorelasi kuat dengan kelas kerawanan yang tinggi.</li>
 </ul>
 </section>
 
@@ -159,17 +158,21 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 
 <h3>2. Permukiman berada tepat di zona itu</h3>
 <p>Sekitar separuh kawasan permukiman (2.791 dari 5.478 ha) berada di kelas tinggi sampai sangat tinggi, padahal zona itu hanya 19% wilayah. Hampir seluruhnya ada di empat kecamatan: Trenggalek (800 ha), Pogalan (752 ha), Karangan (734 ha), dan Tugu (503 ha). Sebagian besar permukiman di Pogalan (±100%), Trenggalek (87%), Karangan (82%), dan Tugu (53%) berada di zona tersebut.</p>
+<div class="fig"><img src="gambar/gambar/g2_permukiman_kecamatan.png" alt="Grafik Keterpaparan Permukiman per Kecamatan" loading="lazy"></div>
 
 <h3>3. Fasilitas publik ikut terpapar</h3>
 <p>Dari 478 fasilitas, 233 (49%) berada di zona tinggi sampai sangat tinggi: 15 dari 26 fasilitas kesehatan (58%), 45 dari 75 fasilitas pemerintahan (60%), 98 dari 185 fasilitas pendidikan (53%), dan 75 dari 192 tempat ibadah (39%). Layanan yang dibutuhkan saat tanggap darurat bisa ikut terganggu justru ketika banjir terjadi. Jalan yang terpapar sekitar 322 km dari 1.059 km (±30%).</p>
+<div class="fig"><img src="gambar/gambar/g3_fasilitas.png" alt="Grafik Keterpaparan Fasilitas Publik" loading="lazy"></div>
 
 <h3>4. Banjir memang pernah tercatat di wilayah ini</h3>
 <p>Inventori memuat 60 catatan pada 32 titik selama 2006-2022. Tahun 2022 paling banyak (19 catatan), disusul 2007 (9). Catatan ini indikatif karena dipengaruhi kelengkapan pelaporan.</p>
+<div class="fig g4"><img src="gambar/gambar/g4_banjir_tahun_gelap.png" alt="Grafik Rekam Jejak Banjir" loading="lazy"></div>
 </section>
 
 <section id="validasi">
 <h2>Seberapa dapat dipercaya peta ini?</h2>
 <p>Model diuji pada titik latihnya sendiri. Pada semua titik, AUC mencapai 0,96. Namun titik non-banjir banyak berada di dataran tinggi yang mudah dibedakan dari lokasi banjir, sehingga nilai itu cenderung optimistis. Ujian yang lebih adil membandingkan titik banjir dengan non-banjir di dataran rendah saja: AUC turun menjadi 0,73, artinya model lebih baik daripada menebak tetapi terbatas di dataran rendah. Pada kurva tingkat keberhasilan, 10% area dengan probabilitas tertinggi mencakup 67% titik banjir (AUC 0,93; n = 21). Belum ada validasi dengan data independen.</p>
+<div class="fig"><img src="gambar/gambar/g6_roc_poster.png" alt="Grafik Kurva ROC" loading="lazy"></div>
 </section>
 
 <section id="ketahanan">
@@ -185,14 +188,6 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 </div>
 </section>
 
-<section id="lapangan">
-<h2>Parameter dan survei lapangan</h2>
-<div class="tbl"><table>
-<thead><tr><th>Lokasi / titik</th><th>Koordinat</th><th>Parameter</th><th>Nilai</th><th>Keterangan</th></tr></thead>
-<tbody><tr><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr></tbody>
-</table></div>
-</section>
-
 <section id="metode">
 <h2>Data dan metode</h2>
 <div class="panel">
@@ -200,7 +195,6 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <p><b>Data latih:</b> 196 titik, 32 di antaranya titik banjir, dan 21 titik banjir jatuh di dalam raster.</p>
 <p><b>Keterpaparan:</b> piksel raster kerawanan dihitung di dalam poligon kawasan permukiman RBI dan dijumlahkan; fasilitas dihitung per titik berdasarkan kelas di lokasinya; jalan dihitung dari titik tiap 50 m sepanjang garis, panjang adalah jumlah titik di kelas 4-5 dikali 50 m (perkiraan).</p>
 <p><b>Keterbatasan:</b> titik banjir sedikit; non-banjir didominasi dataran tinggi; resolusi 30 m terlalu kasar untuk permukiman kecil; catatan banjir indikatif; kelas bersifat relatif; belum ada validasi independen. Kajian ini tidak menganalisis tren iklim: rata-rata curah hujan antarkelas hampir tidak berbeda, sehingga pola kerawanan tidak dapat dikaitkan dengan hujan.</p>
-<p><b>Penggunaan AI:</b> AI dipakai sebagai alat bantu eksplorasi awal, penyusunan format HTML, penulisan kode, dan penyuntingan teks. Seluruh data dan hasil diperiksa tim.</p>
 <p><b>Sumber data:</b> Peta RBI 1:25.000 (BIG) untuk permukiman, fasilitas, dan jalan.</p>
 <p style="margin-bottom:6px"><b>Daftar pustaka</b></p>
 <ul class="note" style="margin:0">
@@ -217,11 +211,12 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <h2>Tim Lemah Teles</h2>
 <p class="lead">Program Studi Geografi, Universitas Negeri Malang</p>
 <div class="team">
-<div class="member"><img class="ph" src="gambar/foto_roy.jpg" alt="Roy Juan Akbar" loading="lazy"><h3>Roy Juan Akbar</h3><p>Prodi Geografi, Universitas Negeri Malang</p></div>
-<div class="member"><img class="ph" src="gambar/foto_satrio.jpg" alt="Satrio Yohan Raditiya" loading="lazy"><h3>Satrio Yohan Raditiya</h3><p>Prodi Geografi, Universitas Negeri Malang</p></div>
+<!-- CATATAN: Pastikan mengunggah file foto Roy dengan nama 'roy.jpeg' ke GitHub agar fotonya muncul -->
+<div class="member"><img class="ph" src="gambar/gambar/roy.jpeg" alt="Roy Juan Akbar" loading="lazy"><h3>Roy Juan Akbar</h3><p>Prodi Geografi, Universitas Negeri Malang</p></div>
+<div class="member"><img class="ph" src="gambar/gambar/satrio.jpeg" alt="Satrio Yohan Raditiya" loading="lazy"><h3>Satrio Yohan Raditiya</h3><p>Prodi Geografi, Universitas Negeri Malang</p></div>
 </div>
 <div class="member" style="max-width:860px;margin-top:18px;display:flex;gap:22px;align-items:center;flex-wrap:wrap">
-<img class="ph" style="margin:0" src="gambar/foto_satti.jpg" alt="Dr. Satti Wagistina, S.P., M.Si" loading="lazy">
+<img class="ph" style="margin:0" src="gambar/gambar/Sati.jpg" alt="Dr. Satti Wagistina, S.P., M.Si" loading="lazy">
 <div><p style="color:var(--water);font:500 16px var(--head);margin:0 0 2px">Dosen pembimbing</p><h3 style="margin:0 0 4px">Dr. Satti Wagistina, S.P., M.Si</h3><p>Prodi Geografi, Universitas Negeri Malang</p></div>
 </div>
 </section>
