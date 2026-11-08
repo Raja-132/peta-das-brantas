@@ -83,6 +83,29 @@ th{background:var(--panel);font:700 16px var(--head)}
 .member p{margin:0;color:var(--muted);font-size:16px}
 footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-map img{animation:none}}
+
+/* Fitur Zoom / Lightbox */
+.modal {
+  display: none; position: fixed; z-index: 999; padding-top: 60px;
+  left: 0; top: 0; width: 100%; height: 100%; overflow: auto;
+  background-color: rgba(6, 21, 35, 0.95); backdrop-filter: blur(8px);
+}
+.modal-content {
+  margin: auto; display: block; width: 90%; max-width: 1200px;
+  border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.8);
+  animation: zoomIn 0.3s ease; cursor: zoom-out;
+}
+@keyframes zoomIn {
+  from {transform: scale(0.8); opacity: 0;} 
+  to {transform: scale(1); opacity: 1;}
+}
+.close-modal {
+  position: absolute; top: 15px; right: 35px; color: var(--muted);
+  font-size: 40px; font-weight: bold; transition: 0.2s; cursor: pointer;
+}
+.close-modal:hover { color: var(--flood); }
+#mapImage { cursor: zoom-in; transition: transform 0.2s; }
+#mapImage:hover { transform: scale(1.02); }
 </style>
 </head>
 <body>
@@ -104,8 +127,14 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 </div>
 
 <div class="hero-map">
-  <!-- PASTIKAN KAMU SUDAH MENGUNGGAH FILE kerawanan_banjir_5kelas.png KE GITHUB -->
-  <img src="gambar/gambar/kerawanan_banjir_5kelas.png" alt="Peta Kerawanan Banjir 5 Kelas" loading="lazy">
+  <!-- Gambar ini sekarang punya id="mapImage" agar bisa diklik zoom -->
+  <img src="gambar/gambar/kerawanan_banjir_5kelas.png" alt="Peta Kerawanan Banjir 5 Kelas" loading="lazy" id="mapImage">
+</div>
+
+<!-- Wadah Zoom / Lightbox -->
+<div id="imageModal" class="modal">
+  <span class="close-modal">×</span>
+  <img class="modal-content" id="zoomedImg">
 </div>
 
 </div></header>
@@ -219,7 +248,6 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <p class="lead">Program Studi Geografi, Universitas Negeri Malang</p>
 <div class="team">
 <div class="member">
-  <!-- INI NAMA FILE FOTO ROY YANG BENAR SESUAI GITHUB KAMU (ROii.jpeg) -->
   <img class="ph" src="gambar/gambar/ROii.jpeg" alt="Roy Juan Akbar" loading="lazy">
   <h3>Roy Juan Akbar</h3>
   <p>Prodi Geografi, Universitas Negeri Malang</p>
@@ -237,6 +265,7 @@ footer{margin-top:80px;padding:34px 0;border-top:1px solid var(--line);color:var
 <footer><div class="wrap">Peta dan analisis disusun oleh Tim Lemah Teles (Roy Juan Akbar dan Satrio Yohan Raditiya), Prodi Geografi, Universitas Negeri Malang. Dosen pembimbing: Dr. Satti Wagistina, S.P., M.Si. Lisensi data mengikuti sumber aslinya.</div></footer>
 
 <script>
+// Skrip Menu Navbar
 const b=document.getElementById('burger'),m=document.getElementById('menu'),close=()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)};
 b.onclick=()=>{b.setAttribute('aria-expanded',m.classList.toggle('open'))};
 document.addEventListener('click',e=>{if(!m.contains(e.target)&&!b.contains(e.target))close()});
@@ -244,6 +273,23 @@ const L=[...m.querySelectorAll('a')];
 L.forEach(a=>a.addEventListener('click',close));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)L.forEach(l=>l.classList.toggle('on',l.hash==='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
 L.forEach(a=>{const s=document.querySelector(a.hash);s&&io.observe(s)});
+
+// Skrip untuk Zoom Lightbox Peta Utama
+const modalMap = document.getElementById("imageModal");
+const imgMap = document.getElementById("mapImage");
+const zoomedImg = document.getElementById("zoomedImg");
+const closeModal = document.querySelector(".close-modal");
+
+imgMap.onclick = function(){
+  modalMap.style.display = "block";
+  zoomedImg.src = this.src;
+}
+closeModal.onclick = function() {
+  modalMap.style.display = "none";
+}
+modalMap.onclick = function(e) {
+  if(e.target !== zoomedImg) modalMap.style.display = "none";
+}
 </script>
 </body>
 </html>
